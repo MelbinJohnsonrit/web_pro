@@ -1,0 +1,20 @@
+p {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: red;
+    padding: 10px;
+}
+
+.classSelector {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+}
+
+#idSelector {
+    font-family: 'Times New Roman', Times, serif;
+    color: yellow;
+    background-color: green;
+    padding: 10px;
+}
