@@ -1,0 +1,30 @@
+<html>
+<head><title>Light Bulb Switch</title>
+    <script>function turnOn() {
+    document.getElementById('bulb').src = 'https://media.istockphoto.com/id/1150776990/vector/%C3%B0%C3%B0%C2%B5%C3%B0%C3%B1%C3%B0%C3%B1%C3%B0%C3%B0%C3%B1%C3%B0-2.jpg?s=612x612&w=0&k=20&c=J8qy9IxZ42caK1yDwu8Y9UNhX7fEhHVC-8A_WRXzKTA=';
+	}
+
+    function turnOff() {
+    document.getElementById('bulb').src = 'https://media.istockphoto.com/id/1132400420/vector/lit-electric-light-bulb-illustration-isolated-on-white-background-vector.jpg?s=612x612&w=0&k=20&c=6hfsfxIJPC2FOIBIe1L98FUGXhHXOdnr20HS17dt2JY=';
+	}
+    </script>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        img {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Light Bulb Switch</h1>
+    <img id="bulb" src="https://media.istockphoto.com/id/1132400420/vector/lit-electric-light-bulb-illustration-isolated-on-white-background-vector.jpg?s=612x612&w=0&k=20&c=6hfsfxIJPC2FOIBIe1L98FUGXhHXOdnr20HS17dt2JY=" alt="Light Bulb">
+    <br>
+    <button onclick="turnOn()">Turn On</button>
+    <button onclick="turnOff()">Turn Off</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

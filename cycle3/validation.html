@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FORM</title>
+<script type="text/javascript">
+  function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const mobile = document.getElementById('mobile').value;
+    let valid = true;
+
+    document.getElementById('nameError').innerHTML = '';
+    document.getElementById('emailError').innerHTML = '';
+    document.getElementById('mobileError').innerHTML = '';
+
+    if (name === '') {
+        document.getElementById('nameError').innerHTML = 'Name is required';
+        valid = false;
+    }
+    
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById('emailError').innerHTML = 'Invalid email format';
+        valid = false;
+    }
+
+    const mobilePattern = /^[0-9]{10}$/;
+    if (!mobilePattern.test(mobile)) {
+        document.getElementById('mobileError').innerHTML = 'Invalid mobile number';
+        valid = false;
+    }
+
+    return valid;
+}
+
+</script>
+
+
+</head>
+<style>
+td{
+padding:8px;
+}
+</style>
+
+<body>
+<center>
+<h1>STUDENT RESGISTER FORM</h1><br>
+<form onsubmit="return validateForm()">
+    <table border="1"cellpadding="2"width=60%>
+    <tr> 
+    	<th>First name</th>
+    	<td><label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span><br></td>
+    </tr>
+    <tr> 
+    	<th>Last name</th>
+    	<td><span class="error" id="nameError"><input type="text">(max 30 characters)</span></td>
+    </tr>
+    <tr> 
+    	<th>D O B</th>
+    	<td><span><input type="date"></span></td>
+    </tr>
+    <tr> 
+    	<th>Email</th>
+    	<td><span><input type="text"></span></td>
+    </tr>
+    <tr> 
+    	<th>Mobile Number</th>
+    	<td><span><input type="text">(max 10 digit)</span></td>
+    </tr>
+    <tr> 
+    	<th>Gender</th>
+    	<td><span><input type="radio" value="Male" name="radio">Male  <input type="radio" value="Female" name="radio">Female</span></td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td><textarea name="Address" rows="4" cols="50"> </textarea></td>
+    </tr>
+    <tr> 
+    	<th>City</th>
+    	<td><span><input type="text">(max 30 characters)</span></td>
+    </tr>
+    <tr> 
+    	<th>Pin Code</th>
+    	<td><span><input type="text">(max 6 digit)</span></td>
+    </tr>
+    <tr> 
+    	<th>State</th>
+    	<td><span><input type="text">(max 30 characters)</span></td>
+    </tr>
+    <tr> 
+    	<th>COUNTRY</th>
+    	<td><select name="COUNTRY" style="width:40%">
+    <option value="India">INDIA</option>
+    <option value="Dubai">USA</option>
+    <option value="Other">OTHER </option>
+
+  </select></td>
+    </tr>
+    <tr> 
+    	<th>HOBBIES</th>
+    	<td>Drawing <input type="checkbox" name="drawing"  /> Singing <input type="checkbox" name="singing"/>Drawing <input type="checkbox" name="drawing"  />Dancing <input type="checkbox" name="dancing" /> sketching <input type="checkbox" name="sketching" /><br> others <input type ="text">
+    
+  </div></td>
+    </tr>
+    
+    
+    <tr> 
+    	<th>QUALIFICATION</th>
+    	<td>
+    		<TABLE border=0>
+    			<tr>
+    			<th>SI.No.Examination</th>
+    			<th>Board</th>
+    			<th>Percentage</th>
+    			<th>Year of passing</th>
+    			</tr>
+    			
+    			<tr>
+    			<td>1	  Class X</td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			</tr>
+    			<td>2	  Class XII</td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			</tr>
+    			<td>3	 Graduation</td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			</tr>
+    			<td>4	 Masters</td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			<td><input type="text"></td>
+    			</tr>
+    		</TABLE>
+   	</td>
+    </tr>
+    <tr> 
+    	<th>COURSES APPLIED FOR </th>
+    	<td><span>MCA <input type="radio"value="MCA" name="RADIO"> M.TECH<input type="radio"name="RADIO" value="MTECH"> M.Sc<input type="radio"name="RADIO" value="MTECH"> Ph.d<input type="radio"name="RADIO" value="MTECH"></span></td>
+    </tr>
+     <tr> 
+    	<th>TYPE YOUR PASSWORD</th>
+    	<td><span><input type="PASSWORD"maxlength="30">(max 30 characters)</span></td>
+    </tr>
+    <tr> 
+    	<th>Date of TC </th>
+    	<td><span><input type="date"></span></td>
+    </tr>
+    <tr>
+        <th colspan =2><input type="submit" value="Submit"><input type="reset" value="Reset"></th> 
+    </tr>
+    </table>
+    
+</form>       
+</center>
+</body>
+</html>
